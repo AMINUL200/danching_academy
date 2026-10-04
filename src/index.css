@@ -1,0 +1,518 @@
+@import "tailwindcss";
+
+/* =========================================================
+   AURORA ACTING ACADEMY — GLOBAL DESIGN SYSTEM
+   Change colors here → entire website updates
+   ========================================================= */
+
+:root {
+  /* =========================
+     BRAND COLORS
+     ========================= */
+
+  --color-primary: #3B145F;
+  --color-primary-dark: #24102F;
+  --color-primary-light: #5A2785;
+
+  /* =========================
+     GOLD / PREMIUM ACCENT
+     ========================= */
+
+  --color-accent: #E7B95E;
+  --color-accent-light: #F4CC72;
+  --color-accent-dark: #C99A3E;
+
+  /* =========================
+     DARK COLORS
+     ========================= */
+
+  --color-dark: #08070D;
+  --color-dark-secondary: #11101A;
+  --color-dark-tertiary: #181522;
+
+  /* =========================
+     LIGHT COLORS
+     ========================= */
+
+  --color-white: #FFFFFF;
+  --color-ivory: #FAF8F4;
+  --color-cream: #F3EEE6;
+
+  /* =========================
+     TEXT COLORS
+     ========================= */
+
+  --color-text: #17151C;
+  --color-text-secondary: #4F4A55;
+  --color-text-muted: #77727B;
+  --color-text-light: #FFFFFF;
+
+  /* =========================
+     BORDER COLORS
+     ========================= */
+
+  --color-border: #E5DED2;
+  --color-border-light: #EFEAE2;
+  --color-border-gold: #D9B866;
+
+  /* =========================
+     STATUS COLORS
+     ========================= */
+
+  --color-success: #3D8B63;
+  --color-error: #C94A4A;
+  --color-warning: #D99A35;
+
+  /* =========================
+     GRADIENTS
+     ========================= */
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    #24102F 0%,
+    #3B145F 55%,
+    #180B25 100%
+  );
+
+  --gradient-hero: linear-gradient(
+    135deg,
+    #08070D 0%,
+    #160D22 45%,
+    #3B145F 100%
+  );
+
+  --gradient-gold: linear-gradient(
+    135deg,
+    #F4CC72 0%,
+    #E7B95E 50%,
+    #C99A3E 100%
+  );
+
+  --gradient-dark: linear-gradient(
+    135deg,
+    #08070D 0%,
+    #11101A 100%
+  );
+
+  /* =========================
+     SHADOWS
+     ========================= */
+
+  --shadow-sm: 0 2px 8px rgba(8, 7, 13, 0.08);
+
+  --shadow-md: 0 8px 25px rgba(8, 7, 13, 0.12);
+
+  --shadow-lg: 0 20px 50px rgba(8, 7, 13, 0.16);
+
+  --shadow-gold: 0 8px 25px rgba(231, 185, 94, 0.25);
+
+  --shadow-purple: 0 8px 30px rgba(59, 20, 95, 0.25);
+
+  /* =========================
+     BORDER RADIUS
+     ========================= */
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* =========================
+     TRANSITIONS
+     ========================= */
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+
+/* =========================================================
+   GLOBAL BODY
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-ivory);
+  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal),
+    border-color var(--transition-normal),
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+
+/* =========================================================
+   COMMON BACKGROUNDS
+   ========================================================= */
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-primary-dark {
+  background-color: var(--color-primary-dark);
+}
+
+.bg-dark {
+  background-color: var(--color-dark);
+}
+
+.bg-dark-secondary {
+  background-color: var(--color-dark-secondary);
+}
+
+.bg-ivory {
+  background-color: var(--color-ivory);
+}
+
+.bg-cream {
+  background-color: var(--color-cream);
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+
+/* =========================================================
+   COMMON TEXT COLORS
+   ========================================================= */
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-dark {
+  color: var(--color-text);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+
+/* =========================================================
+   PREMIUM BUTTONS
+   ========================================================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: var(--gradient-gold);
+  color: var(--color-dark);
+
+  border: 1px solid var(--color-accent);
+
+  padding: 12px 24px;
+
+  border-radius: var(--radius-full);
+
+  font-weight: 600;
+
+  box-shadow: var(--shadow-gold);
+
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(231, 185, 94, 0.35);
+}
+
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: transparent;
+  color: var(--color-accent);
+
+  border: 1px solid var(--color-accent);
+
+  padding: 12px 24px;
+
+  border-radius: var(--radius-full);
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--color-accent);
+  color: var(--color-dark);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PREMIUM CARD
+   ========================================================= */
+
+.premium-card {
+  background: var(--color-white);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.premium-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--color-accent);
+
+  box-shadow: var(--shadow-lg);
+}
+
+
+/* =========================================================
+   GOLD ICON
+   ========================================================= */
+
+.icon-gold {
+  color: var(--color-accent);
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: rgba(231, 185, 94, 0.12);
+
+  color: var(--color-accent);
+}
+
+
+/* =========================================================
+   SECTION STYLES
+   ========================================================= */
+
+.section-light {
+  background-color: var(--color-ivory);
+}
+
+.section-white {
+  background-color: var(--color-white);
+}
+
+.section-dark {
+  background: var(--gradient-dark);
+  color: var(--color-white);
+}
+
+.section-purple {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-section {
+  background: var(--gradient-hero);
+  color: var(--color-white);
+}
+
+.hero-title {
+  color: var(--color-white);
+}
+
+.hero-highlight {
+  color: var(--color-accent);
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.navbar-link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: var(--color-accent);
+}
+
+
+/* =========================================================
+   COURSE CARDS
+   ========================================================= */
+
+.course-card {
+  background-color: var(--color-white);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow-sm);
+
+  transition: all var(--transition-normal);
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+
+  border-color: var(--color-accent);
+
+  box-shadow: var(--shadow-lg);
+}
+
+.course-icon {
+  color: var(--color-accent);
+}
+
+
+/* =========================================================
+   STATISTICS SECTION
+   ========================================================= */
+
+.stats-section {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+}
+
+.stat-number {
+  color: var(--color-accent);
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================================================
+   CTA SECTION
+   ========================================================= */
+
+.cta-section {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+}
+
+.cta-title {
+  color: var(--color-white);
+}
+
+.cta-highlight {
+  color: var(--color-accent);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.footer-heading {
+  color: var(--color-white);
+}
+
+.footer-link {
+  color: var(--color-text-muted);
+}
+
+.footer-link:hover {
+  color: var(--color-accent);
+}
+
+
+/* =========================================================
+   CUSTOM SCROLLBAR
+   ========================================================= */
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-dark-secondary);
+}
+
+/* Chrome, Edge, Safari */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--color-dark-secondary);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--gradient-gold);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-light);
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+}
