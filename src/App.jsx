@@ -9,6 +9,8 @@ import AdminDashboard from "./pages/admin/dashboard/AdminDashboard";
 import SiteSettings from "./pages/admin/settings/SiteSettings";
 import AdminProfile from "./pages/admin/profile/AdminProfile";
 import ContactPage from "./pages/public/contact/ContactPage";
+import AboutPage from "./pages/public/about/AboutPage";
+import SuccessStoriesPage from "./pages/public/about/SuccessStoriesPage";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
         <Route element={<AppLayout />}>
           <Route index path="/" element={<LandingPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/success-stories" element={<SuccessStoriesPage />} />
         </Route>
 
         {/* Admin Layout */}
